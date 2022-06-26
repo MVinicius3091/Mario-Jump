@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #505050;
+}
+
+.instruction {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  border: solid;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(2, 82, 255, 0.9),
+    rgb(165, 207, 244)
+  );
+}
+
+.modal {
+  width: 90%;
+  height: 90%;
+  background: url("../img/mariogameover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  top: 40px;
+  text-align: center;
+  display: none;
+}
+
+.modal img {
+  width: 100px;
+  margin-top: 280px;
+  cursor: pointer;
+}
+
+.pipe {
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.animate {
+  animation: runPipeSimple 3s linear infinite;
+}
+/* .pipe-double {
+  width: 65px;
+  height: 100px;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: runPipeDouble 4s linear infinite;
+} */
+
+.pipe-double img:nth-child(1) {
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+.pipe-double img:nth-child(2) {
+  width: 30px;
+  position: absolute;
+  bottom: 39px;
+  left: 15px;
+}
+.pipe-double img:nth-child(3) {
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+}
+
+#mario {
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.cloud-container {
+  width: 100%;
+  height: 35%;
+  position: relative;
+  overflow: hidden;
+}
+
+#cloud-one {
+  width: 200px;
+  position: absolute;
+  right: 200px;
+  animation: cloud 5s linear infinite;
+}
+#cloud-two {
+  width: 90px;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  animation: cloud 10s linear infinite;
+}
+#cloud-three {
+  width: 100px;
+  position: absolute;
+  right: 100px;
+  top: 80px;
+  animation: cloud 6s linear infinite;
+}
+
+#cloud-four {
+  width: 150px;
+  position: absolute;
+  animation: cloud 9s linear infinite;
+}
+
+#cloud-five {
+  width: 150px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  animation: cloud 12s linear infinite;
+}
+
+#cloud-six {
+  width: 150px;
+  position: absolute;
+  right: 250px;
+  animation: cloud 15s linear infinite;
+}
+#cloud-seven {
+  width: 150px;
+  position: absolute;
+  right: 380px;
+  top: 48px;
+  animation: cloud 17s linear infinite;
+}
+#cloud-eight {
+  width: 150px;
+  position: absolute;
+  right: 450px;
+  animation: cloud 7s linear infinite;
+}
+
+.footer {
+  width: 800px;
+  height: 30px;
+  border: solid;
+  background-image: linear-gradient(to top, green, rgb(74, 236, 74));
+  border-top: none;
+  margin: 0 auto;
+}
+
+.jump {
+  animation: personJump 800ms ease-in-out;
+}
+
+.jumpSuper {
+  animation: personJumpSuper 800ms ease-in-out;
+}
+
+/* jump simple */
+@keyframes personJump {
+  0% {
+    bottom: 0%;
+  }
+
+  40% {
+    bottom: 70px;
+  }
+
+  50% {
+    bottom: 70px;
+  }
+
+  60% {
+    bottom: 70px;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
+
+/* jump super */
+@keyframes personJumpSuper {
+  0% {
+    bottom: 0%;
+  }
+
+  40% {
+    bottom: 120px;
+  }
+
+  50% {
+    bottom: 120px;
+  }
+
+  60% {
+    bottom: 120px;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
+
+/* frame do pipe */
+@keyframes runPipeSimple {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+/* frame da cloud */
+@keyframes cloud {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
