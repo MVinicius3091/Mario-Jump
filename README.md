@@ -12,4 +12,4 @@
 
 ![page](https://github.com/MVinicius3091/Mario-Jump/blob/main/melhorias/Mariogif.gif)
 
-> > > > > > > 37391dd247e9e59843da930c3b2ed675b32915c6
+
